@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nmap Scan Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1, h2 {
+      color: #00557f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #00557f;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #e9f0f4;
+    }
+    .summary, .risks, .steps {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nmap Scan Report</h1>
+
+  <h2>Scan Results</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Host</th>
+        <th>Status</th>
+        <th>Open Ports</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>192.168.1.1</td>
+        <td>Up (0.0020s latency)</td>
+        <td>22 (SSH), 80 (HTTP)</td>
+      </tr>
+      <tr>
+        <td>192.168.1.10</td>
+        <td>Up (0.0030s latency)</td>
+        <td>139 (NetBIOS-SSN), 445 (Microsoft-DS)</td>
+      </tr>
+      <tr>
+        <td>192.168.1.15</td>
+        <td>Up (0.0015s latency)</td>
+        <td>21 (FTP)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="summary">
+    <h2>Scan Summary</h2>
+    <p><strong>Target Range:</strong> 192.168.1.0/24</p>
+    <p><strong>Live Hosts:</strong> 5</p>
+    <p><strong>Notable Ports:</strong> 21 (FTP), 22 (SSH), 80 (HTTP), 445 (SMB)</p>
+  </div>
+
+  <div class="risks">
+    <h2>Potential Risks</h2>
+    <ul>
+      <li>FTP anonymous login</li>
+      <li>Open SMB shares</li>
+    </ul>
+  </div>
+
+  <div class="steps">
+    <h2>Next Steps</h2>
+    <ul>
+      <li>Manual testing</li>
+      <li>Service enumeration</li>
+      <li>Exploit research</li>
+    </ul>
+  </div>
+
+</body>
+</html>
